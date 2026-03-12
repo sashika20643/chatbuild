@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Vielen Dank | Bogen33 Nachbau</title>
+   <style>
+       /* --- GLOBAL RESET & TYPOGRAPHY --- */
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+
+
+       body {
+           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Schweizer Stil */
+           font-size: 16px;
+           line-height: 1.5;
+           color: #000;
+           background-color: #fff;
+           -webkit-font-smoothing: antialiased;
+       }
+
+
+       a {
+           text-decoration: none;
+           color: #000;
+           cursor: pointer;
+       }
+
+
+       ul {
+           list-style: none;
+       }
+
+
+       img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+       }
+
+
+       /* --- LAYOUT UTILITIES --- */
+       .container {
+           max-width: 100%;
+           margin: 0 auto;
+           border-left: 1px solid #000;
+           border-right: 1px solid #000;
+       }
+
+
+       /* --- HEADER --- */
+       header {
+           border-bottom: 1px solid #000;
+           padding: 20px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           position: relative;
+       }
+
+
+       .logo {
+           font-weight: bold;
+           font-size: 24px;
+           letter-spacing: -0.5px;
+           text-transform: uppercase;
+       }
+
+
+       .nav-icons {
+           display: flex;
+           gap: 20px;
+           font-size: 14px;
+           font-weight: bold;
+           align-items: center;
+       }
+
+
+       /* Hauptnavigation */
+       .main-nav {
+           border-bottom: 1px solid #000;
+           padding: 10px 20px;
+           overflow-x: auto;
+       }
+      
+       .main-nav ul {
+           display: flex;
+           gap: 25px;
+       }
+
+
+       .main-nav a {
+           font-size: 14px;
+           text-transform: uppercase;
+           font-weight: 500;
+           white-space: nowrap;
+       }
+
+
+       .main-nav a:hover {
+           text-decoration: underline;
+       }
+
+
+       /* --- BREADCRUMB / CATEGORY HEADER --- */
+       .category-header {
+           padding: 30px 20px;
+           text-align: center;
+           border-bottom: 1px solid #000;
+       }
+
+
+       .category-header h1 {
+           font-size: 32px;
+           font-weight: normal;
+           text-transform: uppercase;
+           letter-spacing: 1px;
+       }
+
+
+       /* --- THANKS SECTION --- */
+       .thanks-section {
+           padding: 80px 20px;
+           text-align: center;
+           border-bottom: 1px solid #000;
+           min-height: 50vh;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+       }
+
+
+       .thanks-section p {
+           font-size: 18px;
+           margin-bottom: 15px;
+           max-width: 600px;
+           color: #333;
+       }
+
+
+       .order-number {
+           font-weight: bold;
+           margin-top: 20px;
+           padding: 15px;
+           border: 1px solid #000;
+           display: inline-block;
+           background-color: #fafafa;
+       }
+
+
+       .btn-primary {
+           display: inline-block;
+           background-color: #000;
+           color: #fff;
+           padding: 14px 32px;
+           text-transform: uppercase;
+           font-size: 14px;
+           font-weight: 500;
+           margin-top: 40px;
+           transition: opacity 0.2s ease, background-color 0.2s ease;
+       }
+
+
+       .btn-primary:hover {
+           opacity: 0.85;
+           color: #fff;
+       }
+
+
+       /* --- FOOTER --- */
+       footer {
+           padding: 40px 20px;
+           display: grid;
+           grid-template-columns: repeat(4, 1fr);
+           gap: 40px;
+           font-size: 13px;
+           background: #fff;
+       }
+
+
+       .footer-col h4 {
+           text-transform: uppercase;
+           margin-bottom: 15px;
+           font-size: 14px;
+       }
+
+
+       .footer-col p {
+           margin-bottom: 10px;
+       }
+
+
+       /* --- RESPONSIVE --- */
+       @media (max-width: 768px) {
+           footer {
+               grid-template-columns: 1fr;
+               gap: 20px;
+           }
+           .main-nav {
+               display: none;
+           }
+           .nav-icons a[href^="mailto"] {
+               display: none;
+           }
+           .thanks-section {
+               padding: 50px 20px;
+           }
+           .thanks-section p {
+               font-size: 16px;
+           }
+       }
+   </style>
+</head>
+<body>
+
+
+   <header>
+       <a href="#" class="logo">Bogen33</a>
+       <div class="nav-icons">
+           <a href="mailto:info@bogen33.ch">info@bogen33.ch</a>
+           <a href="#">Suche</a>
+           <a href="#">Anfrage (0)</a>
+           <a href="#">Menu</a>
+       </div>
+   </header>
+
+
+   <nav class="main-nav">
+       <ul>
+           <li><a href="#">Sortiment</a></li>
+           <li><a href="#">Service</a></li>
+           <li><a href="#">Designer</a></li>
+           <li><a href="#">Hersteller</a></li>
+           <li><a href="#">Über uns</a></li>
+           <li><a href="#">Möbelabo</a></li>
+           <li><a href="#">Jobs</a></li>
+       </ul>
+   </nav>
+
+
+   <main>
+       <div class="category-header">
+           <h1>Vielen Dank</h1>
+       </div>
+
+
+       <div class="thanks-section">
+           <p>Ihre Bestellung / Anfrage wurde erfolgreich an uns übermittelt.</p>
+           <p>Wir haben Ihnen eine Bestätigung per E-Mail gesendet und werden uns in Kürze um Ihr Anliegen kümmern.</p>
+          
+           <div class="order-number">
+               Bestell- / Anfragenummer: #B33-84920
+           </div>
+
+
+           <a href="#" class="btn-primary">Zurück zum Sortiment</a>
+       </div>
+   </main>
+
+
+   <footer>
+       <div class="footer-col">
+           <h4>Bogen33</h4>
+           <p>Hohlstrasse 100<br>CH-8004 Zürich</p>
+           <p><strong>Telefon</strong><br>+41 44 400 00 33</p>
+           <p><strong>Email</strong><br><a href="mailto:info@bogen33.ch">info@bogen33.ch</a></p>
+       </div>
+       <div class="footer-col">
+           <h4>Öffnungszeiten</h4>
+           <p>Di–Fr: 11–18:30 Uhr<br>Sa: 10–17:00 Uhr</p>
+           <p>Termine nach Vereinbarung jederzeit möglich</p>
+       </div>
+       <div class="footer-col">
+           <h4>H100 Openstorage</h4>
+           <p>Fr: 16:00–18:30 Uhr<br>Sa: 12:00–17:00 Uhr<br>Hohlstrasse 122</p>
+       </div>
+       <div class="footer-col">
+           <h4>Links</h4>
+           <ul>
+               <li><a href="#">Newsletter</a></li>
+               <li><a href="#">Impressum</a></li>
+               <li><a href="#">Datenschutz</a></li>
+           </ul>
+       </div>
+   </footer>
+
+   <script src="chat-widget.js"></script>
+
+
+</body>
+</html>
