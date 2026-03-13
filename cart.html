@@ -4,6 +4,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Anfrage-Liste | Bogen33 Nachbau</title>
+   <link rel="stylesheet" href="widget.css">
+
    <style>
        /* --- GLOBAL RESET & TYPOGRAPHY --- */
        * {
@@ -451,7 +453,49 @@
        </div>
    </footer>
 
-   <script src="chat-widget.js"></script>
+   
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mainImage = document.getElementById('mainImage');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                // Update main image source
+                mainImage.src = this.src;
+                
+                // Update active styling
+                thumbnails.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Button click notification
+        const requestButton = document.getElementById('request-button');
+        if (requestButton) {
+            requestButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Wait for widget to load and toast to be available
+                function showNotification() {
+                    if (window.toast) {
+                        window.toast.info('Button clicked detected', {
+                            description: 'The request button was clicked',
+                            duration: 3000,
+                        });
+                    } else {
+                        // Retry after a short delay if toast not yet available
+                        setTimeout(showNotification, 100);
+                    }
+                }
+                
+                showNotification();
+            });
+        }
+    });
+</script>
+<!-- Configure API URL via data attribute to avoid CORS issues -->
+<script src="widget.iife.js" data-api-url="https://getagent-email-agent-server.ceilu9.easypanel.host"></script>
 
 
 </body>
