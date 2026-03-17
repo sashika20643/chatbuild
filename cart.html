@@ -331,7 +331,7 @@
 
 
    <header>
-       <a href="#" class="logo">Bogen33</a>
+       <a href="products/index.html" class="logo">Bogen33</a>
        <div class="nav-icons">
            <a href="mailto:info@bogen33.ch">info@bogen33.ch</a>
            <a href="#">Suche</a>
@@ -360,57 +360,18 @@
        </div>
 
 
-       <div class="cart-section">
-           <table class="cart-table">
-               <thead>
-                   <tr>
-                       <th style="width: 70%;">Produkt</th>
-                       <th style="width: 30%;">Anzahl</th>
-                   </tr>
-               </thead>
-               <tbody>
-                   <!-- Inquiry Item 1 -->
-                   <tr>
-                       <td>
-                           <div class="cart-item-col">
-                               <img src="https://www.bogen33.ch/photo/data/mid-century-auszugstisch-buche-1950er-jahre-diverse-tische-tisch-579-112712-2.jpg?ts=1772803620"
-                                    alt="Mid-Century Auszugstisch"
-                                    class="cart-item-img"
-                                    onerror="this.onerror=null;this.src='https://placehold.co/150x150/f5f5f5/31343C?text=Tisch';">
-                               <div class="cart-item-details">
-                                   <div class="cart-item-title">Mid-Century Auszugstisch Buche</div>
-                                   <div class="cart-item-meta">1950er Jahre</div>
-                                   <a href="#" class="cart-item-remove">Aus Liste entfernen</a>
-                               </div>
-                           </div>
-                       </td>
-                       <td class="cart-qty">
-                           <input type="number" value="1" min="1">
-                       </td>
-                   </tr>
-
-
-                   <!-- Inquiry Item 2 -->
-                   <tr>
-                       <td>
-                           <div class="cart-item-col">
-                               <img src="https://www.bogen33.ch/photo/data/saarinen-tulip-tisch-120cm-marmor-saarinen-eero-diverse-tische-tisch-686-109338-2.jpg?ts=1772803620"
-                                    alt="Saarinen Tulip Tisch"
-                                    class="cart-item-img"
-                                    onerror="this.onerror=null;this.src='https://placehold.co/150x150/f5f5f5/31343C?text=Tulip+Tisch';">
-                               <div class="cart-item-details">
-                                   <div class="cart-item-title">Saarinen Tulip Tisch ø120cm</div>
-                                   <div class="cart-item-meta">Marmor, weiss</div>
-                                   <a href="#" class="cart-item-remove">Aus Liste entfernen</a>
-                               </div>
-                           </div>
-                       </td>
-                       <td class="cart-qty">
-                           <input type="number" value="1" min="1">
-                       </td>
-                   </tr>
-               </tbody>
-           </table>
+      <div class="cart-section">
+          <table class="cart-table">
+              <thead>
+                  <tr>
+                      <th style="width: 70%;">Produkt</th>
+                      <th style="width: 30%;">Anzahl</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Inhalte werden dynamisch aus localStorage gefüllt -->
+              </tbody>
+          </table>
 
 
            <div class="cart-bottom">
@@ -427,7 +388,7 @@
    </main>
 
 
-   <footer>
+  <footer>
        <div class="footer-col">
            <h4>Bogen33</h4>
            <p>Hohlstrasse 100<br>CH-8004 Zürich</p>
@@ -454,49 +415,31 @@
    </footer>
 
    
-   <script>
+  <script src="cart.js"></script>
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const mainImage = document.getElementById('mainImage');
-        const thumbnails = document.querySelectorAll('.thumbnail');
+      const continueButton = document.querySelector('.btn-continue');
+      if (!continueButton) return;
 
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                // Update main image source
-                mainImage.src = this.src;
-                
-                // Update active styling
-                thumbnails.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+      continueButton.addEventListener('click', (e) => {
+        e.preventDefault();
 
-        // Button click notification
-        const requestButton = document.getElementById('request-button');
-        if (requestButton) {
-            requestButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Wait for widget to load and toast to be available
-                function showNotification() {
-                    if (window.toast) {
-                        window.toast.info('Button clicked detected', {
-                            description: 'The request button was clicked',
-                            duration: 3000,
-                        });
-                    } else {
-                        // Retry after a short delay if toast not yet available
-                        setTimeout(showNotification, 100);
-                    }
-                }
-                
-                showNotification();
+        function showNotification() {
+          if (window.toast) {
+            window.toast.info('Ihre Anfrage wurde übernommen', {
+              description: 'Im nächsten Schritt können Sie Ihre Kontaktdaten ergänzen.',
+              duration: 3000,
             });
+          } else {
+            setTimeout(showNotification, 100);
+          }
         }
+
+        showNotification();
+      });
     });
-</script>
-<!-- Configure API URL via data attribute to avoid CORS issues -->
-<script src="widget.iife.js" data-api-url="https://getagent-email-agent-server.ceilu9.easypanel.host"></script>
-
-
+  </script>
+  <!-- Configure API URL via data attribute to avoid CORS issues -->
+  <script src="widget.iife.js" data-api-url="https://getagent-email-agent-server.ceilu9.easypanel.host"></script>
 </body>
 </html>

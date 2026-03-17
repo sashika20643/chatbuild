@@ -279,7 +279,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Bogen33</a>
+        <a href="index.html" class="logo">Bogen33</a>
         <div class="nav-icons">
             <a href="mailto:info@bogen33.ch">info@bogen33.ch</a>
             <a href="#">Suche</a>
@@ -411,16 +411,14 @@
             const thumbnails = document.querySelectorAll('.thumbnail');
             thumbnails.forEach(thumb => {
                 thumb.addEventListener('click', function() {
-                    // Update main image source
                     mainImage.src = this.src;
-                    
-                    // Update active styling
                     thumbnails.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                 });
             });
         });
     </script>
+    <script src="../cart.js"></script>
     <script src="../chat-widget.js"></script>
 </body>
 </html>

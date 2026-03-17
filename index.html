@@ -324,7 +324,7 @@
 <body>
 
     <header>
-        <a href="#" class="logo">Bogen33</a>
+        <a href="products/index.html" class="logo">Bogen33</a>
         <div class="nav-icons">
             <a href="mailto:info@bogen33.ch">info@bogen33.ch</a>
             <a href="#">Suche</a>
@@ -347,7 +347,7 @@
 
     <main>
         <div class="breadcrumb">
-            <a href="#">Sortiment</a> <span>/</span> 
+            <a href="products/index.html">Sortiment</a> <span>/</span> 
             <a href="#">Tisch</a> <span>/</span> 
             <a href="#">Lounge-Tisch</a> <span>/</span> 
             <span class="current">Beistelltisch Caruelle Nussbaum</span>
@@ -455,37 +455,11 @@
 
             thumbnails.forEach(thumb => {
                 thumb.addEventListener('click', function() {
-                    // Update main image source
                     mainImage.src = this.src;
-                    
-                    // Update active styling
                     thumbnails.forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
                 });
             });
-
-            // Button click notification
-            const requestButton = document.getElementById('request-button');
-            if (requestButton) {
-                requestButton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Wait for widget to load and toast to be available
-                    function showNotification() {
-                        if (window.toast) {
-                            window.toast.info('Button clicked detected', {
-                                description: 'The request button was clicked',
-                                duration: 3000,
-                            });
-                        } else {
-                            // Retry after a short delay if toast not yet available
-                            setTimeout(showNotification, 100);
-                        }
-                    }
-                    
-                    showNotification();
-                });
-            }
         });
     </script>
     <!-- Configure API URL via data attribute to avoid CORS issues -->
