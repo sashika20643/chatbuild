@@ -423,5 +423,38 @@
     <script src="../chat-widget.js"></script>
     <!-- Configure API URL via data attribute to avoid CORS issues -->
     <script src="../widget.iife.js" data-api-url="https://getagent-email-agent-server.ceilu9.easypanel.host"></script>
+    <script src="../product-dwell-trigger.iife.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        const productName = 'Blaue 80er Jahre Tische';
+
+        const startWhenReady = () => {
+          if (
+            window.Chatbot &&
+            window.ChatWidgetProductDwellTrigger &&
+            typeof window.ChatWidgetProductDwellTrigger.start === 'function'
+          ) {
+            window.ChatWidgetProductDwellTrigger.start(productName, 15000);
+            return;
+          }
+          window.setTimeout(startWhenReady, 250);
+        };
+
+        startWhenReady();
+
+        const hideQuestionsButton = () => {
+          const buttons = document.querySelectorAll('button');
+          buttons.forEach((btn) => {
+            if (btn.textContent && btn.textContent.includes('💬 Questions?')) {
+              btn.style.display = 'none';
+            }
+          });
+        };
+
+        hideQuestionsButton();
+        const observer = new MutationObserver(hideQuestionsButton);
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
+    </script>
 </body>
 </html>

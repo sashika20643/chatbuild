@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anfrageformular | Bogen33 Nachbau</title>
+    <link rel="stylesheet" href="widget.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #000;
+            background: #fff;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            border-bottom: 1px solid #000;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .main-nav {
+            border-bottom: 1px solid #000;
+            padding: 10px 20px;
+            overflow-x: auto;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        .main-nav a {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .page-wrap {
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            margin: 0 auto;
+            width: min(1400px, 100%);
+        }
+
+        .form-header {
+            border-bottom: 1px solid #000;
+            padding: 16px 20px 14px;
+        }
+
+        .form-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            font-size: 15px;
+        }
+
+        .form-content {
+            padding: 18px 20px 24px;
+        }
+
+        .required-note {
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .field-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            border: 1px solid #000;
+            font-size: 15px;
+            font-family: inherit;
+            padding: 10px 12px;
+            background: #fff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 84px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 20px;
+        }
+
+        .form-grid .full {
+            grid-column: 1 / -1;
+        }
+
+        .newsletter-check {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .newsletter-check input {
+            width: auto;
+            margin: 0;
+        }
+
+        .actions {
+            margin-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: 1px solid #000;
+            padding: 11px 18px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            background: #fff;
+            color: #000;
+        }
+
+        .btn-primary {
+            background: #000;
+            color: #fff;
+        }
+
+        footer {
+            border-top: 1px solid #000;
+            padding: 34px 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            font-size: 13px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            footer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-icons a[href^="mailto"] {
+                display: none;
+            }
+
+            .main-nav {
+                display: none;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <header>
+            <a href="products/index.html" class="logo">Bogen33</a>
+            <div class="nav-icons">
+                <a href="mailto:info@bogen33.ch">info@bogen33.ch</a>
+                <a href="#">Suche</a>
+                <a href="cart.html">Anfrage</a>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="products/index.html">Sortiment</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Designer</a></li>
+                <li><a href="#">Hersteller</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Möbelabo</a></li>
+                <li><a href="#">Jobs</a></li>
+            </ul>
+        </nav>
+
+        <section class="form-header">
+            <h1>Anfrage</h1>
+            <p>INFO · Unser System sendet Ihnen automatisch alle Objektinformationen per Mail zu.</p>
+        </section>
+
+        <main class="form-content">
+            <p class="required-note">* Mit Stern markierte Angaben sind verpflichtend - Vielen Dank für Ihr Verständnis.</p>
+            <h2 class="section-title">1. Persönliche Daten</h2>
+
+            <form>
+                <div class="field-group">
+                    <label for="comment">Anfrage / Kundenkommentar</label>
+                    <textarea id="comment" placeholder="Bitte beschreiben Sie uns hier doch Ihr Anliegen..."></textarea>
+                </div>
+
+                <div class="form-grid">
+                    <div class="field-group">
+                        <label for="email">E-Mail *</label>
+                        <input id="email" type="email" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="plz">PLZ *</label>
+                        <input id="plz" type="text" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="phone">Telefon *</label>
+                        <input id="phone" type="tel" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="firstname">Vorname *</label>
+                        <input id="firstname" type="text" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="lastname">Nachname *</label>
+                        <input id="lastname" type="text" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="company">Firma</label>
+                        <input id="company" type="text">
+                    </div>
+
+                    <div class="field-group">
+                        <label for="street">Strasse, Nr.</label>
+                        <input id="street" type="text">
+                    </div>
+                    <div class="field-group">
+                        <label for="city">Ort</label>
+                        <input id="city" type="text">
+                    </div>
+
+                    <div class="field-group">
+                        <label for="country">Land</label>
+                        <select id="country">
+                            <option>Schweiz</option>
+                            <option>Deutschland</option>
+                            <option>Österreich</option>
+                            <option>Frankreich</option>
+                        </select>
+                    </div>
+                    <div class="field-group">
+                        <label>Newsletter</label>
+                        <label class="newsletter-check" for="newsletter">
+                            <input id="newsletter" type="checkbox">
+                            Newsletter abonnieren
+                        </label>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="button" class="btn">Weitere Produkte anfragen</button>
+                    <button type="submit" class="btn btn-primary">Anfragen</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <div class="footer-col">
+                <h4>Bogen33</h4>
+                <p>Hohlstrasse 100<br>CH-8004 Zürich</p>
+                <p><strong>Telefon</strong><br>+41 44 400 00 33</p>
+                <p><strong>Email</strong><br><a href="mailto:info@bogen33.ch">info@bogen33.ch</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Öffnungszeiten</h4>
+                <p>Di–Fr: 11–18:30 Uhr<br>Sa: 10–17:00 Uhr</p>
+                <p>Termine nach Vereinbarung jederzeit möglich</p>
+            </div>
+            <div class="footer-col">
+                <h4>H100 Openstorage</h4>
+                <p>Fr: 16:00–18:30 Uhr<br>Sa: 12:00–17:00 Uhr<br>Hohlstrasse 122</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Configure API URL via data attribute to avoid CORS issues -->
+    <script src="widget.iife.js" data-api-url="https://getagent-email-agent-server.ceilu9.easypanel.host"></script>
+    <script src="webform-abandonment-trigger.iife.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        let enquirySubmitted = false;
+        const form = document.querySelector('form');
+        const submitBtn = document.querySelector('.btn.btn-primary');
+        const backToEnquiryBtn = document.querySelector('.actions .btn[type="button"]');
+
+        const triggerAbandonment = (source) => {
+          if (enquirySubmitted) return;
+          if (
+            window.ChatWidgetWebFormAbandonmentTrigger &&
+            typeof window.ChatWidgetWebFormAbandonmentTrigger.trigger === 'function'
+          ) {
+            window.ChatWidgetWebFormAbandonmentTrigger.trigger(source);
+          } else {
+            console.warn(
+              '[WebFormAbandonment] ChatWidgetWebFormAbandonmentTrigger missing — copy webform-abandonment-trigger.iife.js next to widget.iife.js and rebuild widget.',
+            );
+          }
+        };
+
+        if (form) {
+          form.addEventListener('submit', () => {
+            enquirySubmitted = true;
+          });
+        }
+
+        if (submitBtn) {
+          submitBtn.addEventListener('click', () => {
+            enquirySubmitted = true;
+          });
+        }
+
+        if (backToEnquiryBtn) {
+          backToEnquiryBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            triggerAbandonment('back_button');
+          });
+        }
+
+        // Intercept browser back once so we can show abandonment notification.
+        history.pushState({ formGuard: true }, '', location.href);
+        window.addEventListener('popstate', () => {
+          triggerAbandonment('browser_back');
+          history.pushState({ formGuard: true }, '', location.href);
+        });
+
+        // Native leave guard only. Custom React notifications cannot reliably paint during unload.
+        window.addEventListener('beforeunload', (event) => {
+          if (enquirySubmitted) return;
+          event.preventDefault();
+          event.returnValue = '';
+        });
+
+      });
+    </script>
+</body>
+</html>

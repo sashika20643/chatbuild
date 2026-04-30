@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anfrage | Bogen33</title>
+  <style>
+    :root {
+      --text:#111;
+      --muted:#666;
+      --line:#e6e6e6;
+      --bg:#fff;
+      --soft:#f7f7f7;
+      --accent:#111;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:Arial, Helvetica, sans-serif; line-height:1.45; }
+    a { color:inherit; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:22px 40px; border-bottom:1px solid var(--line); }
+    .brand { font-size:26px; font-weight:700; letter-spacing:.02em; }
+    .brand span { display:block; font-size:11px; font-weight:400; color:var(--muted); letter-spacing:.28em; text-transform:uppercase; margin-top:2px; }
+    .nav-toggle { display:none; }
+    .request { font-size:14px; font-weight:700; }
+    .layout { display:grid; grid-template-columns:260px minmax(0,1fr); min-height:calc(100vh - 78px); }
+    aside { border-right:1px solid var(--line); padding:32px 34px; }
+    .search { border:1px solid var(--line); padding:11px 12px; width:100%; margin-bottom:26px; font-size:14px; }
+    nav ul, .footer-links, .social { list-style:none; padding:0; margin:0; }
+    nav li { margin:0 0 13px; font-size:15px; }
+    nav .primary { margin-bottom:28px; }
+    .contact { margin-top:32px; font-size:14px; color:var(--muted); }
+    main { padding:48px 52px 36px; }
+    .content { max-width:960px; margin:0 auto; }
+    h1 { font-size:32px; margin:0 0 24px; font-weight:600; }
+    .info { background:var(--soft); border:1px solid var(--line); padding:18px 20px; font-size:15px; margin-bottom:28px; }
+    .empty-box { border:1px dashed #cfcfcf; padding:42px 24px; text-align:center; color:#444; margin-bottom:46px; }
+    .promo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-bottom:46px; }
+    .promo { background:var(--soft); padding:26px; min-height:150px; display:flex; flex-direction:column; justify-content:center; border:1px solid var(--line); }
+    .promo h2 { font-size:18px; letter-spacing:.05em; text-transform:uppercase; margin:0 0 10px; }
+    .promo p { margin:0; color:#333; }
+    footer { border-top:1px solid var(--line); padding-top:34px; display:grid; grid-template-columns:1fr 1fr; gap:36px; font-size:14px; }
+    footer h3 { margin:0 0 10px; font-size:15px; text-transform:uppercase; letter-spacing:.05em; }
+    .footer-links li { margin-bottom:8px; }
+    address { font-style:normal; color:#222; }
+    .opening { margin-top:22px; }
+    .network { grid-column:1/-1; border-top:1px solid var(--line); padding-top:28px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+    .network-card { border:1px solid var(--line); padding:18px; background:#fff; }
+    .network-card h4 { margin:0 0 8px; font-size:15px; }
+    .network-card p { margin:0 0 12px; color:var(--muted); font-size:13px; }
+    .copyright { grid-column:1/-1; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; }
+    @media (max-width:820px) {
+      .topbar { padding:18px 22px; }
+      .layout { display:block; }
+      aside { border-right:0; border-bottom:1px solid var(--line); padding:22px; }
+      nav ul { columns:2; }
+      main { padding:34px 22px; }
+      .promo-grid, footer, .network { grid-template-columns:1fr; }
+      .network { display:grid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://www.bogen33.ch/" aria-label="Bogen33 Startseite">Bogen33<span>Vintage Design</span></a>
+    <a class="request" href="https://www.bogen33.ch/kasse">Anfrage 0</a>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <input class="search" type="search" placeholder="Suche" aria-label="Suche" />
+      <nav aria-label="Hauptnavigation">
+        <ul class="primary">
+          <li><a href="https://www.bogen33.ch/sortiment">Sortiment</a></li>
+          <li><a href="https://www.bogen33.ch/service">Service</a></li>
+          <li><a href="https://www.bogen33.ch/designer">Designer</a></li>
+          <li><a href="https://www.bogen33.ch/hersteller">Hersteller</a></li>
+          <li><a href="https://www.bogen33.ch/ueber-uns">Über uns</a></li>
+          <li><a href="https://www.bogen33.ch/moebelabo">Möbelabo</a></li>
+          <li><a href="https://www.bogen33.ch/jobs">Jobs</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://www.bogen33.ch/stuhl">Stuhl</a></li>
+          <li><a href="https://www.bogen33.ch/tisch">Tisch</a></li>
+          <li><a href="https://www.bogen33.ch/sofa">Sofa</a></li>
+          <li><a href="https://www.bogen33.ch/sessel">Sessel</a></li>
+          <li><a href="https://www.bogen33.ch/schrank-sideboard">Schrank/Sideboard</a></li>
+          <li><a href="https://www.bogen33.ch/lampen">Lampen</a></li>
+          <li><a href="https://www.bogen33.ch/garten">Garten</a></li>
+          <li><a href="https://www.bogen33.ch/diverses">Diverses</a></li>
+          <li><a href="https://www.bogen33.ch/archiv">Archiv</a></li>
+          <li><a href="https://www.bogen33.ch/best-price">Best-Price</a></li>
+        </ul>
+      </nav>
+      <div class="contact">
+        <p><a href="mailto:info@bogen33.ch">info@bogen33.ch</a></p>
+        <p><a href="tel:+41444000033">+41 44 400 00 33</a></p>
+      </div>
+    </aside>
+
+    <main>
+      <div class="content">
+        <h1>Anfrage</h1>
+        <section class="info">INFO : Unser System sendet Ihnen automatisch alle Objektinformationen per Mail zu.</section>
+        <section class="empty-box">Sie haben noch kein Objekt zur Anfrage markiert.</section>
+
+        <section class="promo-grid" aria-label="Anmeldungen">
+          <article class="promo">
+            <h2>Newsletter</h2>
+            <p>Newsletter abonnieren und 10% Rabatt auf unsere Vintage-Möbelklassiker sichern!</p>
+          </article>
+          <article class="promo">
+            <h2>Moebelabo</h2>
+            <p>Möbelabo abonnieren und regelmässig Neuzugänge, Angebote etc. erhalten.</p>
+          </article>
+        </section>
+
+        <footer>
+          <section>
+            <ul class="footer-links">
+              <li><a href="https://www.bogen33.ch/newsletter">Newsletter</a></li>
+              <li><a href="https://bogen33.sharepoint.com/">Presse</a></li>
+              <li><a href="https://www.bogen33.ch/impressum">Impressum</a></li>
+              <li><a href="https://www.bogen33.ch/datenschutz">Datenschutz</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Bogen33</h3>
+            <address>
+              Hohlstrasse 100<br />
+              CH-8004 Zürich<br />
+              Telefon <a href="tel:+41444000033">+41 44 400 00 33</a>
+            </address>
+            <div class="opening">
+              <strong>Öffnungszeiten</strong><br />
+              Di–Fr: 11–18:30 Uhr<br />
+              Sa: 10–17:00 Uhr<br /><br />
+              Termine nach Vereinbarung jederzeit möglich
+            </div>
+            <div class="opening">
+              <strong>H100 OPENSTORAGE</strong><br />
+              Fr: 16:00–18:30 Uhr<br />
+              Sa: 12:00–17:00 Uhr<br />
+              Hohlstrasse 122
+            </div>
+          </section>
+
+          <section class="network" aria-label="H100 Netzwerk">
+            <article class="network-card">
+              <h4><a href="https://www.h100.ch/">H100 – Das Möbelhaus</a></h4>
+              <p>Designklassiker, Vintage und neue Möbelshops an einem Ort.</p>
+              <a href="https://www.h100.ch/">www.h100.ch</a>
+            </article>
+            <article class="network-card">
+              <h4><a href="https://www.bogen33.ch/">Bogen 33</a></h4>
+              <p>Vintage-Möbel und Designklassiker aus den 1950er- bis 1980er-Jahren.</p>
+              <a href="https://www.bogen33.ch/">www.bogen33.ch</a>
+            </article>
+            <article class="network-card">
+              <h4><a href="https://www.memorie.ch/">Memorie.ch</a></h4>
+              <p>Design Online-Shop und Showroom für neu hergestellte Klassiker.</p>
+              <a href="https://www.memorie.ch/">www.memorie.ch</a>
+            </article>
+            <article class="network-card">
+              <h4><a href="https://www.viadukt3.ch/">Viadukt*3</a></h4>
+              <p>Holztische, Holzstühle und Showroom für horgenglarus Möbel.</p>
+              <a href="https://www.viadukt3.ch/">www.viadukt3.ch</a>
+            </article>
+          </section>
+          <div class="copyright">Static HTML generated from the public Bogen33 Anfrage page.</div>
+        </footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

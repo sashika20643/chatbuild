@@ -1,0 +1,1 @@
+(function(){"use strict";const t="chat-widget-inactivity";function i(){typeof window>"u"||window.dispatchEvent(new CustomEvent(t))}window.ChatWidgetInactivityTrigger={trigger(){window.__CHAT_WIDGET_PENDING_INACTIVITY__={ts:Date.now()},requestAnimationFrame(()=>{requestAnimationFrame(()=>{i()})})}}})();

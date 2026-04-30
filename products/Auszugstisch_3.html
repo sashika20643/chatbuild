@@ -278,6 +278,9 @@
             }
         }
     </style>
+        <script src="../widget.iife.js"></script>
+        <script src="../inactivity-trigger.iife.js"></script>
+        <script src="../product-dwell-trigger.iife.js"></script>
 </head>
 <body>
     <header>
@@ -423,6 +426,31 @@
             });
         });
     </script>
-    <script src="../widget.iife.js"></script>
+
+<script>    
+  window.addEventListener('load', () => {
+    const productName = 'Mid-Century Auszugstisch, Buche, 1950er Jahre';
+
+    // Keep widget closed initially. Only schedule product-dwell notification.
+    const startWhenReady = () => {
+      if (
+        window.Chatbot &&
+        window.ChatWidgetProductDwellTrigger &&
+        typeof window.ChatWidgetProductDwellTrigger.start === 'function'
+      ) {
+        window.ChatWidgetProductDwellTrigger.start(productName, 15000);
+        console.log('[ProductDwell] timer started for:', productName);
+        return;
+      }
+
+      // Retry briefly in case scripts are still initializing.
+      window.setTimeout(startWhenReady, 250);
+    };
+
+    startWhenReady();
+
+  });
+
+</script>
 </body>
 </html>

@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html lang="de" class="ie ie8 "  data-page-controller="mykassen" data-page-action="dispatchroute" data-page-route="mykassen-dispatchroute" data-dsgvo="passive-banner"> <![endif]-->
+<!--[if IE 9]>			<html lang="de" class="ie ie9 "  data-page-controller="mykassen" data-page-action="dispatchroute" data-page-route="mykassen-dispatchroute" data-dsgvo="passive-banner"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html lang="de" class="       "  data-page-controller="mykassen" data-page-action="dispatchroute" data-page-route="mykassen-dispatchroute" data-dsgvo="passive-banner"> <!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+	<meta charset="utf-8" />
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<meta name="p:domain_verify" content="50092424590d2887133453e189c7d61f"/>
+
+	<title>Anfrage | Bogen33</title>
+<meta name="apple-mobile-web-app-title" content="Anfrage | Bogen33">
+
+										<meta property="og:site_name" content="Bogen33"/>
+													<meta property="og:url" content="https://www.bogen33.ch/kasse"/>
+									<meta property="og:title" content="Anfrage"/>
+							
+
+
+
+
+
+
+
+						<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MB3VXCG');</script>
+<!-- End Google Tag Manager -->
+			
+
+
+
+
+
+	
+
+	
+	<link href="/assets/stylesheets/bootstrap.css?ts=1776860412" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/assets/javascripts/vendor/malihu-custom-scrollbar/jquery.mCustomScrollbarProper.css?ts=1776860412" />
+
+	<link href="/assets/javascripts/vendor/select2-4_1_0/select2.min.css?ts=1776860412" rel="stylesheet" type="text/css" media="all" />
+
+	<link href="/assets/stylesheets/design.css?ts=1776860412" rel="stylesheet" />
+
+	<link href="/assets/stylesheets/bg-page.css?ts=1776860412" rel="stylesheet" />
+	<link href="/assets/stylesheets/front-page.css?ts=1776860412" rel="stylesheet" />
+
+	<link href="/assets/stylesheets/custom.css?ts=1776860412" rel="stylesheet" />
+	<link href="/assets/stylesheets/custom2.css?ts=1776860412" rel="stylesheet" />
+
+
+	
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/assets/javascripts/vendor/jquery-2.2.3.min.js?ts=1776860412"><\/script>')</script>
+
+	<link rel="stylesheet" href="/assets/javascripts/vendor/fancybox2/jquery.fancybox.css?ts=1776860412" type="text/css" media="screen" />
+	<script src="/assets/javascripts/vendor/fancybox2/jquery.fancybox.pack.js?ts=1776860412"></script>
+	
+	<script type="text/javascript" src="/assets/javascripts/vendor/fancybox2/helpers/jquery.fancybox-media.js?ts=1776860412"></script>
+
+	<link rel="stylesheet" href="/assets/javascripts/vendor/fancybox2/helpers/jquery.fancybox-thumbs.css?ts=1776860412" type="text/css" media="screen" />
+	<script type="text/javascript" src="/assets/javascripts/vendor/fancybox2/helpers/jquery.fancybox-thumbs.js?ts=1776860412"></script>
+
+
+	<script src="/assets/javascripts/vendor/malihu-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js?ts=1776860412"></script>
+
+	
+	<script defer src="https://ar.identic.ai/libs/3d-viewer.js?ts=1"></script>
+	<script defer src="https://ar.identic.ai/libs/ar-button.js?ts=2"></script>
+
+	<script>
+		(function($){
+			//$(window).on("load",function(){
+			$(document).on("ready",function(){
+				if ($.fn.mCustomScrollbar) {
+					$(".content-box.scrollable").mCustomScrollbar({
+						//theme: "minimal-dark"
+						theme: "minimal-dark v3"
+						//,scrollbarPosition: "outside"
+
+						// START: in JS hardcoded stuff for minimal and minimal-dark
+						//          ,scrollButtons:{ enable: false }
+						//          ,autoHideScrollbar: true
+						//          ,scrollbarPosition: "outside" // parent needs to be non-static
+						// END: in JS hardcoded stuff for minimal and minimal-dark
+						,callbacks:{
+
+							/*whileScrolling:function(){
+							  myCustomFn(this);
+							}
+							,*/
+							/*onScroll:function(){
+							  myCustomFn(this);
+							}
+							,onScrollStart:function(){
+							  myCustomFn(this);
+							}
+							*/
+						}
+					});
+				}
+			});
+			function myScollInit (){
+				updateEqualheight2('.equalheight');
+			}
+			function myCustomFn(el){
+				console.log(el.mcs.top);
+				if (el.mcs.top >= -91) {
+					//$('#header-search-box').show().css('top', 0);
+					$('#header-search-box').stop(true,false).animate({ 'top': '0' }, 500);
+				} else {
+					//$('#header-search-box').hide().css('top', -91);
+					$('#header-search-box').stop(true,false).animate({ 'top': '-91' }, 500);
+				}
+			}
+		})(jQuery);
+	</script>
+	
+	
+	
+	<link href="/assets/javascripts/vendor/slick-1_8_1/slick/slick.css?ts=1776860412" rel="stylesheet" type="text/css" media="all" />
+	<link href="/assets/javascripts/vendor/slick-1_8_1/slick/slick-theme.css?ts=1776860412" rel="stylesheet" type="text/css" media="all" />
+	<script src="/assets/javascripts/vendor/slick-1_8_1/slick/slick.min.js?ts=1776860412"></script>
+
+	<link href="/assets/javascripts/vendor/slick-1_8_1/slick/mySlickSlider.css?ts=1776860412" rel="stylesheet" type="text/css" media="all" />
+
+	<script src="/assets/javascripts/vendor/select2-4_1_0/select2.min.js?ts=1776860412"></script>
+</head>
+
+<body>
+	
+
+
+
+
+			
+		<!-- Global site tag (gtag.js) - AdWords: 867151350 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RVY64EG3QE"></script>
+		<script>
+			/* <![CDATA[ */
+		
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+		
+			gtag('config', 'G-RVY64EG3QE');
+			/* ]]> */
+		</script>
+	
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+						<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB3VXCG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+			
+
+
+
+
+
+
+
+
+	
+		<a class="sr-only" href="#main-content">Skip to main content</a>
+		
+	<!-- Fixed navbar -->
+<div role="navigation" class="navbar navbar-default navbar-fixed-top" id="header">
+	<div class="container" id="header-metanav">
+
+		<div class="border-box relative">
+
+
+			<div class="navbar-header">
+									<button data-target=".metanav-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						
+						<span class="fa fa-navicon"></span>
+					</button>
+					<button class="btn btn-default special-search-btn mobile-special-search-btn"><span class="fa fa-search"></span></button>
+					<a href="/cart" id="li-basket-mobile" class="inline-cart-mobile-content btn btn-default special-cart-btn mobile-special-cart-btn"><span class="icon-cart-custom2"></span><span class="sr-only"> Anfrage</span><sup class="count">1</sup></a>
+					
+								<a href="/" class="navbar-brand"><img src="/assets/images/logo.png?ts=1776860412" class="img-responsive" alt="Bogen33" /></a>
+				<!--
+				<p class="navbar-text visible-xs">MENU</p>
+				-->
+			</div>
+							<button type="button" class="btn btn-default pull-right special-close-btn">&times;</button>
+						<!--<button data-target=".metanav-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="fa fa-navicon"></span>
+			  </button>-->
+
+			
+
+			<div class="collapse navbar-collapse metanav-collapse nav-meta">
+
+									<div class="meta-nav-box1 clearfix">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="hidden-xs"><a class="special-search-btn" href="#"><span class="fa fa-search"></span><span class="hidden-sm hidden-md hidden-lg"> Suche</span></a></li>
+							
+								<li class="inline-cart-content"><a href="/cart"><span class="icon-cart-custom2"></span> Anfrage<sup>1</sup><div class="hidden-sm hidden-md hidden-lg" style="margin-top: 2px; font-weight: normal; font-size: 11px; line-height: 1;">INFO : Unser System sendet Ihnen automatisch alle Objektinformationen per Mail zu.</div></a></li>
+
+							
+						</ul>
+
+						<ul class="nav navbar-nav">
+																								<li class="first"><a href="/moebel" >Sortiment</a></li>
+																																<li class=""><a href="/service" >Service</a></li>
+																																<li class=""><a href="/designer" >Designer</a></li>
+																																<li class=""><a href="/hersteller" >Hersteller</a></li>
+																																<li class=""><a href="/about" >Über uns</a></li>
+																																<li class=""><a href="/moebelabo" >Möbelabo</a></li>
+																																<li class=""><a href="/jobs" >Jobs</a></li>
+															
+							
+																								<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/stuhl-1"   role="button" aria-haspopup="true" aria-expanded="false">Stuhl</a>
+    
+</li>
+																	<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/tisch-2"   role="button" aria-haspopup="true" aria-expanded="false">Tisch</a>
+    
+</li>
+																	<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/sofa-3"   role="button" aria-haspopup="true" aria-expanded="false">Sofa</a>
+    
+</li>
+																	<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/sessel-4"   role="button" aria-haspopup="true" aria-expanded="false">Sessel</a>
+    
+</li>
+																	<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/schrank-sideboard-5"   role="button" aria-haspopup="true" aria-expanded="false">Schrank/Sideboard</a>
+    
+</li>
+																	<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/lampen-6"   role="button" aria-haspopup="true" aria-expanded="false">Lampen</a>
+    
+</li>
+																	<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/garten-7"   role="button" aria-haspopup="true" aria-expanded="false">Garten</a>
+    
+</li>
+																	<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/diverses-8"   role="button" aria-haspopup="true" aria-expanded="false">Diverses</a>
+    
+</li>
+															
+															<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/archiv"   role="button" aria-haspopup="true" aria-expanded="false">Archiv</a>
+    
+</li>
+															<li class="mobile-shop-links2 hidden-sm hidden-md hidden-lg  ">
+	<a href="/moebel/best-price"   role="button" aria-haspopup="true" aria-expanded="false">Best-Price</a>
+    
+</li>
+														
+
+
+							
+						</ul>
+					</div>
+				
+
+				<ul class="nav navbar-nav navbar-right absolute-br hidden-xs">
+																					<li class="header-special-phone-email2 header-special-email"><a href="mailto:info@bogen33.ch">info@bogen33.ch</a></li>
+																<li class="header-special-phone-email2 header-special-phone"><a href="tel:+41444000033">+41 44 400 00 33</a></li>
+										
+					<li class="header-special-logo"><span class="nav-text"><img src="/assets/images/logo-old.png?ts=1776860412" class="img-responsive" alt="Bogen33" style="max-height: 25px;" /></span></li>
+					
+
+																		
+
+<li><a href="https://www.facebook.com/bogen33" target="_blank"><span class="header-social-icon icon-facebook"></span></a></li>
+													<li><a href="https://instagram.com/bogen33" target="_blank"><span class="header-social-icon icon-instagram"></span></a></li>
+													<li><a href="https://www.pinterest.com/bogen33" target="_blank"><span class="header-social-icon icon-pinterest"></span></a></li>
+												
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+			
+		<div id="header-search-box" class="" style="position: relative; top: -91px;">
+			<div class="container">
+				<div class="border-box-rl border-box-b">
+					<form method="GET" action="/search" role="search" class="visible-sm visible-md visible-lg navbar-form navbar-input-group" style="margin: 0; padding: 0;">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" value="" placeholder=" SUCHE &amp; FINDE bei Bogen33" name="q" class="form-control" />
+								<span class="input-group-btn">
+									<!--<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>-->
+									<button class="btn btn-default" type="submit" style="border-color: transparent;"><span class="<!--fa fa-angle-right--> icon-angle-right" aria-hidden="true"></span></button>
+								</span>
+							</div>
+						</div>
+					</form>
+
+					<form method="GET" action="/search" role="search" class="visible-xs navbar-form navbar-input-group" style="margin: 0; padding: 0;">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" value="" placeholder=" SUCHE" name="q" class="form-control" />
+								<span class="input-group-btn">
+									<!--<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>-->
+									<button class="btn btn-default" type="submit" style="border-color: transparent;"><span class="<!--fa fa-angle-right--> icon-angle-right" aria-hidden="true"></span></button>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+
+
+
+
+
+</div>
+
+	
+
+
+	
+
+
+
+	
+	
+
+<div id="main-container" class="fullheight">
+	<div id="main-content" class="container fullheight padding-bottom-fix">
+		<div class="content-box border-box-rl fullheight scrollable">
+			
+		
+	
+
+	<div class="content-box-inner">
+
+		<div class="title-box border-box-b">
+			<h1>Anfrage</h1>
+			<div class="margin-top-6">
+				INFO : Unser System sendet Ihnen automatisch alle Objektinformationen per Mail zu.
+			</div>
+		</div>
+
+		<div class="content-body-simple">
+
+			<form name="kasse_userdata" action="/kasse" method="POST" class="generic-form  ">
+    
+
+	
+
+	
+
+	    
+
+
+
+	<div style="margin-bottom: 25px;">
+		<b style="font-size: 22px; line-height:1;">*</b>
+		<div style="margin-top: -5px;">Mit Stern markierte Angaben sind verpflichtend - Vielen Dank für Ihr Verständnis.</div>
+	</div>
+
+
+	<h3>
+<span class="flow-step"><span class="step-number">1. </span><span class="step-desciption">Persönliche Daten</span></span></h3>
+
+
+	
+				
+	<br>
+	<div class="row">
+		<div class="col-xs-12 ">
+			<label class="control-label " for="kasse_overview-comment-x">Anfrage / Kundenkommentar</label>
+			<textarea class="form-control" id="kasse_overview-comment-x" name="comment" rows="5" cols="40" aria-label="Kommentar" style="height: 80px;" placeholder="Bitte beschreiben Sie uns hier doch Ihr Anliegen, gerne senden wir Ihnen persönlich auch Alternativobjekte vom OPENSTORAGE zu. "></textarea>
+		</div>
+	</div>
+	<br>
+
+				<div class='row'><div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  required' data-meta-name="email" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-email-x">E-Mail<span class="required-field"> *</span></label>
+						<input class="form-control " id="kasse_userdata-email-x" name="email" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  required' data-meta-name="zip" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-zip-x">PLZ<span class="required-field"> *</span></label>
+						<input class="form-control " id="kasse_userdata-zip-x" name="zip" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm visible-md visible-lg'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  required' data-meta-name="phone" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-phone-x">Telefon<span class="required-field"> *</span></label>
+						<input class="form-control " id="kasse_userdata-phone-x" name="phone" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  required' data-meta-name="firstName" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-firstName-x">Vorname<span class="required-field"> *</span></label>
+						<input class="form-control " id="kasse_userdata-firstName-x" name="firstName" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm visible-md visible-lg'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  required' data-meta-name="lastName" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-lastName-x">Nachname<span class="required-field"> *</span></label>
+						<input class="form-control " id="kasse_userdata-lastName-x" name="lastName" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  ' data-meta-name="company" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-company-x">Firma</label>
+						<input class="form-control " id="kasse_userdata-company-x" name="company" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm visible-md visible-lg'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  ' data-meta-name="street" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-street-x">Strasse, Nr.</label>
+						<input class="form-control " id="kasse_userdata-street-x" name="street" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  ' data-meta-name="city" data-meta-type="text">
+		
+									<label class="control-label " for="kasse_userdata-city-x">Ort</label>
+						<input class="form-control " id="kasse_userdata-city-x" name="city" value="" type="text"  />
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm visible-md visible-lg'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+					
+					
+					
+		
+	
+	
+	<div class='form-group  ' data-meta-name="country" data-meta-type="select">
+		
+														<label class="control-label " for="kasse_userdata-country-x">Land</label>
+								<select class="form-control  " id="kasse_userdata-country-x" name="country" >
+																		
+							<option value="1" >Schweiz</option>
+													
+							<option value="64" >Dänemark</option>
+													
+							<option value="79" >Deutschland</option>
+													
+							<option value="74" >Finnland</option>
+													
+							<option value="75" >Frankreich</option>
+													
+							<option value="99" >Italien</option>
+													
+							<option value="123" >Malaysia</option>
+													
+							<option value="140" >Niederlande (Holland)</option>
+													
+							<option value="5" >Austria</option>
+													
+							<option value="178" >Schweden</option>
+													
+							<option value="173" >Spanien</option>
+													
+							<option value="12" >USA</option>
+													
+							<option value="193" >Vereinigtes Königreich (England)</option>
+															</select>
+										
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+			
+		</div><div class='clearfix visible-xs visible-sm'></div>
+			<div class='col-xs-12 col-sm-12 col-md-6 col-lg-6 '>
+
+			
+		</div></div>
+	
+	<div class="row">
+					<div class="col-xs-12 col-md-6">
+				
+
+Newsletter
+<div class="">
+    
+						
+					
+					
+		
+	
+	
+	<div class='form-group  ' data-meta-name="newsletter" data-meta-type="checkbox">
+		
+					<div class='checkbox '>
+				<label class="">
+					<input type="checkbox" id="kasse_userdata-newsletter-x" name="newsletter" autocomplete="off"   aria-label="Newsletter" />
+					
+						Newsletter abonnieren
+									</label>
+			</div>
+							
+						<span class="help-block"></span>
+		
+	</div>
+
+				
+</div>
+			</div>
+			</div>
+
+	
+	
+	
+		<br />
+	<br />
+	<div class="clearfix">
+		<div class="pull-left">
+			<a href="/moebel" class="btn btn-default btn-wide">Weitere Produkte anfragen</a>
+			<br />
+			<br />
+			<br />
+			<br />
+		</div>
+
+		<div class="pull-right">
+			
+    
+
+<button class="btn btn-primary btn-wide" type="submit" name="form" value="kasse_userdata">Anfragen</button>
+		</div>
+	</div>
+
+
+    
+            <input type="hidden" name="form" value="kasse_userdata"/>
+    </form>
+
+
+
+		</div>
+	</div>
+
+
+
+	
+
+			<div id="footer">
+	
+
+		
+
+		<div class="<!--border-box-rl-->">
+
+			<div class="extra-footer-newsletter-box">
+
+				<form id="newsletter-form" method="post" class="form-horizontal" role="form" style="margin-bottom: 0;">
+					<div class="col-xs-12 col-sm-6 col-md-6" style="padding-left: 0;">
+						<div id="extra_newsletter_title">NEWSLETTER</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6" style="padding-left: 0;">
+						<span>
+							Newsletter abonnieren und <span style="color:#FF0000;">10% Rabatt</span> auf<br>
+							unsere Vintage-Möbelklassiker sichern!
+						</span>
+						<br>
+						<div>
+							<div class="col-xs-9 col-sm-6 col-md-6" style="float: left; padding-left: 0;">
+								<input type="text" class="form-control extra-newsletter-input" name="newsletter-email" id="newsletter-email" placeholder="Email-Adresse" style="border-color: transparent;">
+							</div>
+							<div class="col-xs-3 col-sm-6 col-md-6" style="float: left; padding-left: 0; padding-right: 0;">
+								<span class="input-group-btn">
+									<button class="btn btn-default extra-newsletter-button" type="submit" style="border-color: transparent;"><span class="<!--fa fa-angle-right--> icon-angle-right" aria-hidden="true"></span></button>
+								</span>
+							</div>
+
+						</div>
+					</div>
+				</form>
+				<div>&nbsp;</div>
+			</div>
+
+		</div>
+
+
+
+		<div class="<!--border-box-rl--> border-box-b footer-inner bg-blackXY relative">
+
+			<div class="footer-mobelabo-box">
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-7 col-sm-offset-5 col-md-6 col-md-offset-6">
+						<div id="footer-mobelabo-div" class="border-box-b">
+
+							<div class="clearfix relative" style="font-size: 14px; letter-spacing: normal; text-transform: none; margin-top: 0; padding-right: 50px">
+								<a href="/moebelabo" class="btn btn-default" type="submit" style="border-color: transparent; position: absolute; bottom: 0px; right: 0px;"><span class="fa fa-angle-right" aria-hidden="true"></span></a>
+
+								<div style="font-weight: 300; font-size: 49px; margin: 18px 0 0 0; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase;">Moebelabo</div>
+								<div style="padding: 10px 0 18px; line-height: inherit;">
+									Möbelabo abonnieren und regelmässig Neuzugänge,<br class="visible-lg" /> Angebote etc. erhalten
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="footer-logo">
+				
+				<img src="/assets/images/logo.png?ts=1776860412" class="img-responsive" alt="Bogen33" style=" height: 28px;" />
+				
+			</div>
+
+
+			<div class="footer-cols">
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-5 col-md-6 footer-min-height">
+						<div class="relative footer-min-height">
+															<ul class="nav nav-pills absolute-sm-bl absolute-md-bl absolute-lg-bl" style="width: 100%;">
+																			<li class="text-center "><a href="/newsletter" >Newsletter</a></li>
+																			<li class="text-center "><a href="https://bogen33.sharepoint.com/:f:/s/MarKom482/IgDVBvav0n04RIdSmfxIhdQSAcRco38eXcw9xOgrKuq6xiQ?e=NnkKVh" target='_blank'>Presse</a></li>
+																			<li class="text-center "><a href="/impressum" >Impressum</a></li>
+																			<li class="text-center "><a href="/privacy" >Datenschutz</a></li>
+																	</ul>
+													</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3 extra-padding-xs footer-min-height">
+						<div class="relative footer-min-height">
+															<div class="absolute-sm-bl absolute-md-bl absolute-lg-bl" style="width: 100%; padding-bottom: 4px;">
+																																										<div>
+													
+													<p>
+<b>Bogen33</b><br>
+Hohlstrasse 100<br>
+CH-8004 Zürich<br>
+</p><p><b>Telefon</b><br>+41 44 400 00 33</p><p><b>Öffnungszeiten&nbsp;</b></p><p>
+Di–Fr:<span style="white-space: pre;">	</span>11–18:30 Uhr<br>
+Sa:<span style="white-space: pre;">		</span>10–17:00 Uhr &nbsp;</p><p>Termine nach Vereinbarung jederzeit möglich</p><p><b>H100 OPENSTORAGE</b></p><p>Fr:<span style="white-space:pre">	</span>16:00–18:30 Uhr<br>Sa:<span style="white-space:pre">	</span>12:00–17:00 Uhr<br>Hohlstrasse 122&nbsp;</p>
+
+<a class="bold" href="https://www.bogen33.ch">www.bogen33.ch</a>
+												</div>
+																																						</div>
+													</div>
+					</div>
+					<div class="col-xs-12 col-sm-3 text-right extra-padding-xs footer-min-height">
+						<div class="relative footer-min-height">
+							<img src="/assets/images/logo-old.png?ts=1776860412" class="img-responsive" alt="Bogen33" style="margin: 0 0 0 auto;" />
+
+							<div class="absolute-sm-br absolute-md-br absolute-lg-br" style="padding-bottom: 4px;">
+								
+																	<ul class="nav nav-pills nav-stacked pull-right footer-stacked-nav">
+										<li style="font-size: 10px; font-weight: 400; line-height: 1.2;">
+											<a href="/kontakt"  style="padding-bottom: 0; font-size: 10px; font-weight: 400; line-height: 1.2;">
+												<span style="display: inline-block; font-size: 12px; line-height: 1.3; padding-right: 4px;"><span>Finde uns<br /> hier</span></span> <span class="fa fa-map-marker fa-3x"></span>
+											</a>
+										</li>
+									</ul>
+																									<ul class="nav nav-pills pull-right footer-social-nav text-center">
+																					
+
+<li><a href="https://www.facebook.com/bogen33" target="_blank"><span class="footer-social-icon icon-facebook"></span></a></li>
+																					<li><a href="https://instagram.com/bogen33" target="_blank"><span class="footer-social-icon icon-instagram"></span></a></li>
+																					<li><a href="https://www.pinterest.com/bogen33" target="_blank"><span class="footer-social-icon icon-pinterest"></span></a></li>
+																				
+									</ul>
+																
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	
+</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+	
+
+
+	
+	<script src="/assets/javascripts/bootstrap.js?ts=1776860412"></script>
+
+	
+
+	<script type="text/javascript" src="/assets/javascripts/main.js?ts=1776860412"></script>
+
+	<script type="text/javascript" src="/assets/javascripts/vendor/jquery-match-height/jquery.matchHeight-min.js?ts=1776860412"></script>
+
+	<script type="text/javascript" src="/assets/javascripts/design.js?ts=1776860412"></script>
+	<script type="text/javascript" src="/assets/javascripts/custom.js?ts=1776860412"></script>
+
+	<script src="/assets/javascripts/vendor/slick-1_8_1/slick/mySlickSlider.js?ts=1776860412"></script>
+
+</body>
+</html>
+
+
+<div class="bg-content-box" style="position: fixed; top: 0; width: 100%; z-index: -1;">
+	<div class="container">
+
+		<div class="container-inner-special boder-test padding-20XY">
+
+							<div class="background-contents-box-1">
+
+											<div class="row row-special">
+							<div class="col-xs-5 col-sm-5">
+																																						<a href="http://www.h100.ch" target="_blank" class="block">
+										
+																					<img src="/photo/data/50083_2.png?ts=1776860412" alt="H100 – Das Möbelhaus" class="img-responsive" />
+										
+																					</a>
+																																			</div>
+							<div class="col-xs-7 col-sm-7">
+																	<div class="bg-content-txt">
+																				<a href="http://www.h100.ch" target="_blank" class="block img-pos-bottom">
+											
+											<h2>DESIGNKLASSIKER – VINTAGE &amp; NEU </h2>
+<div class="hidden-xs">H100 – Das Möbelhaus ist das Zuhause unserer Möbelshops Bogen33, Viadukt*3 und Memorie.ch. Wir möchten euch eine bessere Übersicht über die Möbelwelt bieten und dafür sorgen, dass ihr das Beste aus der Welt des Möbeldesigns an einem Ort findet – nämlich bei uns im H100. </div><div class="hidden-xs"><br></div>
+<div class="small hidden-xs margin-top-10">
+	<strong>H100</strong>,
+	Hohlstrasse 100,
+	CH-8004 Zürich</div>
+<div class="small hidden-xs">
+	<strong>Öffnungszeiten</strong>:
+	Di–Fr: 11:00–18:30 Uhr,
+	Sa: 10:00–17:00 Uhr<br><b style="color: rgb(0, 0, 0); font-family: " times="" new="" roman";="" font-size:="" medium;="" font-style:="" normal;="" font-variant-ligatures:="" font-variant-caps:="" letter-spacing:="" orphans:="" 2;="" text-align:="" start;="" text-indent:="" 0px;="" text-transform:="" none;="" white-space:="" widows:="" word-spacing:="" -webkit-text-stroke-width:="" text-decoration-style:="" initial;="" text-decoration-color:="" initial;"="">Tel:</b><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman";="" font-size:="" medium;="" font-style:="" normal;="" font-variant-ligatures:="" font-variant-caps:="" font-weight:="" 400;="" letter-spacing:="" orphans:="" 2;="" text-align:="" start;="" text-indent:="" 0px;="" text-transform:="" none;="" white-space:="" widows:="" word-spacing:="" -webkit-text-stroke-width:="" text-decoration-style:="" initial;="" text-decoration-color:="" display:="" inline="" !important;="" float:="" none;"=""><span>&nbsp;</span>+41 (0)44 400 00 33</span></div>
+
+																					</a>
+																			</div>
+																									<a href="http://www.h100.ch" target="_blank" class="pull-right bold">H100 – Das Möbelhaus&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>
+								
+							</div>
+						</div>
+											<div class="row row-special">
+							<div class="col-xs-5 col-sm-5">
+																																						<a href="http://www.bogen33.ch" target="_blank" class="block">
+										
+																					<img src="/photo/data/50082_2.png?ts=1776860412" alt="Bogen 33" class="img-responsive" />
+										
+																					</a>
+																																			</div>
+							<div class="col-xs-7 col-sm-7">
+																	<div class="bg-content-txt">
+																				<a href="http://www.bogen33.ch" target="_blank" class="block img-pos-bottom">
+											
+											<h2>VINTAGE-DESIGN &amp; GARTENKLASSIKER </h2>
+<div class="hidden-xs">Bogen33 spezialisiert sich seit über 20 Jahren auf Vintage-Möbel und Designklassiker aus den 1950er- bis 1980er-Jahren sowie auf ein umfangreiches Gartenmöbel-Sortiment. Neben Möbeldesign und Inneneinrichtung bieten wir Beratung für Privat sowie für die Gastronomie und Hotellerie. </div><div class="hidden-xs"><br></div><div class="hidden-xs"><b>Bogen33</b>, Hohlstrasse 100, CH-8004 Zürich</div><div class="hidden-xs"><b>Öffnungszeiten:</b>&nbsp;Di–Fr: 11:00–18:30 Uhr, Sa: 10:00–17:00 Uhr</div><div class="hidden-xs"><b>Tel:</b> +41 (0)44 400 00 33</div><div><br></div>
+
+																					</a>
+																			</div>
+																									<a href="http://www.bogen33.ch" target="_blank" class="pull-right bold">Bogen 33&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>
+								
+							</div>
+						</div>
+											<div class="row row-special">
+							<div class="col-xs-5 col-sm-5">
+																																						<a href="http://www.memorie.ch" target="_blank" class="block">
+										
+																					<img src="/photo/data/50097_2.png?ts=1776860412" alt="Memorie.ch" class="img-responsive" />
+										
+																					</a>
+																																			</div>
+							<div class="col-xs-7 col-sm-7">
+																	<div class="bg-content-txt">
+																				<a href="http://www.memorie.ch" target="_blank" class="block img-pos-bottom">
+											
+											<h2>DESIGN ONLINE-SHOP UND SHOWROOM </h2>
+<div class="">Memorie.ch gedenkt aller grossen Designs, die noch immer neu hergestellt werden. Hier könnt ihr euer Wunschobjekt bequem und einfach online bestellen und das Möbel wird direkt zu euch nach Hause geliefert. </div><div class=""><br></div>
+<div class="small hidden-xs margin-top-10">
+	<strong>Memorie.ch</strong>,
+	Hohlstrasse 100,
+	CH-8004 Zürich
+</div>
+<div class="small hidden-xs">
+	<strong>Öffnungszeiten</strong>:
+	Di–Fr: 11:00–18:30 Uhr,
+	Sa: 10:00–17:00 Uhr
+<br><b style="color: rgb(0, 0, 0); font-family: " times="" new="" roman";="" font-size:="" medium;="" font-style:="" normal;="" font-variant-ligatures:="" font-variant-caps:="" letter-spacing:="" orphans:="" 2;="" text-align:="" start;="" text-indent:="" 0px;="" text-transform:="" none;="" white-space:="" widows:="" word-spacing:="" -webkit-text-stroke-width:="" text-decoration-style:="" initial;="" text-decoration-color:="" initial;"="">Tel:</b><span style="color: rgb(0, 0, 0); font-family: " times="" new="" roman";="" font-size:="" medium;="" font-style:="" normal;="" font-variant-ligatures:="" font-variant-caps:="" font-weight:="" 400;="" letter-spacing:="" orphans:="" 2;="" text-align:="" start;="" text-indent:="" 0px;="" text-transform:="" none;="" white-space:="" widows:="" word-spacing:="" -webkit-text-stroke-width:="" text-decoration-style:="" initial;="" text-decoration-color:="" display:="" inline="" !important;="" float:="" none;"=""><span>&nbsp;</span>+41 (0)44 261 42 24</span></div>
+
+																					</a>
+																			</div>
+																									<a href="http://www.memorie.ch" target="_blank" class="pull-right bold">Memorie.ch&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>
+								
+							</div>
+						</div>
+											<div class="row row-special">
+							<div class="col-xs-5 col-sm-5">
+																																						<a href="http://www.viadukt3.ch" target="_blank" class="block">
+										
+																					<img src="/photo/data/50086_2.png?ts=1776860412" alt="Viadukt*3" class="img-responsive" />
+										
+																					</a>
+																																			</div>
+							<div class="col-xs-7 col-sm-7">
+																	<div class="bg-content-txt">
+																				<a href="http://www.viadukt3.ch" target="_blank" class="block img-pos-bottom">
+											
+											<h2>HOLZTISCHE &amp; HOLZSTÜHLE </h2>
+<div class="hidden-xs"><div class="hidden-xs">Viadukt*3 ist Anlaufstelle für antike und neu geschreinerte Tische und Stühle aus Holz sowie der grösste Showroom der Schweiz für Möbel des traditionsreichen Schreinerhauses horgenglarus.</div><div class="hidden-xs"><br></div><div class="small hidden-xs margin-top-10"><strong>Viadukt*3</strong>, Hohlstrasse 100, 8004 Zürich</div><div class="small hidden-xs"><strong>Öffnungszeiten</strong>: Di–Fr: 11:00–18:30 Uhr, Sa: 10:00–17:00 Uhr<br><strong>Tel:</strong>&nbsp;+41 (0)44 400 10 50</div></div>
+
+																					</a>
+																			</div>
+																									<a href="http://www.viadukt3.ch" target="_blank" class="pull-right bold">Viadukt*3&nbsp;<span class="fa fa-angle-right" aria-hidden="true"></span></a>
+								
+							</div>
+						</div>
+					
+				</div>
+					
+
+			
+
+			
+			
+
+
+			<div class="background-newsletter-box">
+
+
+				<div class="hidden-smXY hidden-mdXY hidden-lgXY" style="">
+					<form id="bg-newsletter-form" method="post" class="form-horizontal" role="form" style="margin-bottom: 0;">
+						<div id="bg-footer-newsletter-div" class="input-group">
+							
+							<label class="control-label sr-only" for="newsletter-email">NEWSLETTER</label>
+							<input type="text" class="form-control" name="newsletter-email" id="newsletter-email" placeholder=" NEWSLETTER" style="border-color: transparent;">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit" style="border-color: transparent;"><span class="fa fa-angle-right" aria-hidden="true"></span></button>
+							</span>
+						</div>
+						
+					</form>
+				</div>
+
+			</div>
+
+							<div class="background-presslink-box">
+					<div>
+						<div class="form-horizontal" style="margin-bottom: 0;">
+							<div class="input-group">
+								<span class="input-group-addon"><a href="https://bogen33-my.sharepoint.com/personal/kontakt_memorie_ch/_layouts/15/onedrive.aspx?login_hint=kontakt%40memorie%2Ech&id=%2Fpersonal%2Fkontakt%5Fmemorie%5Fch%2FDocuments%2FPresse&view=0" target="_blank" class="block">Pressematerial</a></span>
+								<span></span>
+								<span class="input-group-btn">
+									<a href="https://bogen33-my.sharepoint.com/personal/kontakt_memorie_ch/_layouts/15/onedrive.aspx?login_hint=kontakt%40memorie%2Ech&id=%2Fpersonal%2Fkontakt%5Fmemorie%5Fch%2FDocuments%2FPresse&view=0" target="_blank" class="btn btn-default" type="submit" style="border-color: transparent;"><span class="fa fa-angle-right" aria-hidden="true"></span></a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+
+			<div class="special-footer">
+				<div class="speical-footer-inner boder-test pt-200">
+
+				</div>
+			</div>
+
+		</div>
+
+		
+
+	</div>
+</div>
+
