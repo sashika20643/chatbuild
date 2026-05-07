@@ -281,6 +281,8 @@
         <script src="../widget.iife.js"></script>
         <script src="../inactivity-trigger.iife.js"></script>
         <script src="../product-dwell-trigger.iife.js"></script>
+        <script src="../scroll-indecision-trigger.iife.js"></script>
+
 </head>
 <body>
     <header>
@@ -452,5 +454,12 @@
   });
 
 </script>
+<script>
+    window.ChatWidgetScrollIndecisionTrigger?.start({
+      minUp: 2,
+      minDown: 2,
+      windowMs: 30000
+    });
+  </script>
 </body>
 </html>

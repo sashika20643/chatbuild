@@ -294,5 +294,13 @@
 
   <!-- Configure API URL via data attribute to avoid CORS issues -->
   <script src="widget.iife.js" data-api-url="https://getagent-email-agent-server.ceilu9.easypanel.host"></script>
+  <script src="thank-you-trigger.iife.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (window.ChatWidgetThankYouTrigger && typeof window.ChatWidgetThankYouTrigger.trigger === 'function') {
+        window.ChatWidgetThankYouTrigger.trigger();
+      }
+    });
+  </script>
 </body>
 </html>
