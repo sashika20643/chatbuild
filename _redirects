@@ -1,0 +1,2 @@
+# OAuth return: serve the magic-link app shell so React Router can run LogtoCallback (same JS as /auth/magic-link/).
+/callback /auth/magic-link/index.html 200
