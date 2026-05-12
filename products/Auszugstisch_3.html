@@ -455,6 +455,12 @@
 
 </script>
 <script>
+  // Trigger inactivity suggestion only after a full idle window with no user interaction.
+  window.addEventListener('load', () => {
+    window.ChatWidgetInactivityTrigger?.start(60000);
+  });
+</script>
+<script>
     window.ChatWidgetScrollIndecisionTrigger?.start({
       minUp: 2,
       minDown: 2,
