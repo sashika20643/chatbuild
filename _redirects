@@ -1,0 +1,6 @@
+# Rewrite /callback (Logto OIDC redirect URI) to the auth SPA without changing the browser URL.
+# React Router inside the SPA then matches the /callback route and exchanges the code.
+/callback  /auth/magic-link/index.html  200
+
+# SPA fallback for any deep link under /auth/magic-link/
+/auth/magic-link/*  /auth/magic-link/index.html  200
