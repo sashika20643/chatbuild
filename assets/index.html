@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tische | Bogen33 Nachbau</title>
+   <link rel="stylesheet" href="../widget.css">
+
+   <style>
+       /* --- GLOBAL RESET & TYPOGRAPHY --- */
+       * {
+           box-sizing: border-box;
+           margin: 0;
+           padding: 0;
+       }
+
+
+       body {
+           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Schweizer Stil */
+           font-size: 16px;
+           line-height: 1.5;
+           color: #000;
+           background-color: #fff;
+           -webkit-font-smoothing: antialiased;
+       }
+
+
+       a {
+           text-decoration: none;
+           color: #000;
+           cursor: pointer;
+       }
+
+
+       ul {
+           list-style: none;
+       }
+
+
+       img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+       }
+
+
+       /* --- LAYOUT UTILITIES --- */
+       .container {
+           max-width: 100%;
+           margin: 0 auto;
+           border-left: 1px solid #000;
+           border-right: 1px solid #000;
+       }
+
+
+       /* Wrapper für Desktop-Breite Begrenzung (optional) */
+       .wrapper {
+           max-width: 1440px;
+           margin: 0 auto;
+           padding: 0 20px;
+       }
+
+
+       /* --- HEADER --- */
+       header {
+           border-bottom: 1px solid #000;
+           padding: 20px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           position: relative;
+       }
+
+
+       .logo {
+           font-weight: bold;
+           font-size: 24px;
+           letter-spacing: -0.5px;
+           text-transform: uppercase;
+       }
+
+
+       .nav-icons {
+           display: flex;
+           gap: 20px;
+           font-size: 14px;
+           font-weight: bold;
+           align-items: center;
+       }
+
+
+       /* Hauptnavigation */
+       .main-nav {
+           border-bottom: 1px solid #000;
+           padding: 10px 20px;
+           overflow-x: auto;
+       }
+      
+       .main-nav ul {
+           display: flex;
+           gap: 25px;
+       }
+
+
+       .main-nav a {
+           font-size: 14px;
+           text-transform: uppercase;
+           font-weight: 500;
+           white-space: nowrap;
+       }
+
+
+       .main-nav a:hover {
+           text-decoration: underline;
+       }
+
+
+       /* --- BREADCRUMB / CATEGORY HEADER --- */
+       .category-header {
+           padding: 30px 20px;
+           text-align: center;
+           border-bottom: 1px solid #000;
+       }
+
+
+       .category-header h1 {
+           font-size: 32px;
+           font-weight: normal;
+           text-transform: uppercase;
+           letter-spacing: 1px;
+       }
+
+
+       /* --- PRODUCT LISTING GRID --- */
+       .product-listing {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+           border-top: 1px solid #000;
+           border-left: 1px solid #000;
+           margin: 40px 20px;
+           min-height: 60vh;
+       }
+
+
+       .product-card {
+           display: flex;
+           flex-direction: column;
+           text-decoration: none;
+           color: inherit;
+           border-right: 1px solid #000;
+           border-bottom: 1px solid #000;
+           transition: background-color 0.2s ease;
+       }
+      
+       .product-card:hover {
+           background-color: #fafafa;
+       }
+
+
+       .product-image-wrapper {
+           margin: 0;
+           aspect-ratio: 1 / 1;
+           background-color: #f5f5f5;
+           overflow: hidden;
+           position: relative;
+       }
+
+
+       .product-image-wrapper img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           transition: transform 0.3s ease, opacity 0.3s ease;
+       }
+
+
+       .product-card:hover .product-image-wrapper img {
+           opacity: 0.85;
+           transform: scale(1.02);
+       }
+
+
+       .product-info-row {
+           display: flex;
+           justify-content: space-between;
+           align-items: flex-start;
+           font-size: 14px;
+           border-top: 1px solid #000;
+           padding: 10px 12px; /* Innenabstand deutlich reduziert */
+           margin-top: auto;
+       }
+
+
+       .product-title {
+           font-weight: 500;
+           margin-bottom: 0;
+           line-height: 1.5;
+           height: 3em; /* Forciert die Höhe auf exakt 2 Zeilen */
+           overflow: hidden;
+           display: -webkit-box;
+           -webkit-box-orient: vertical;
+           -webkit-line-clamp: 2; /* Schneidet längeren Text nach 2 Zeilen mit ... ab */
+       }
+
+
+       /* --- FOOTER --- */
+       footer {
+           border-top: 1px solid #000;
+           padding: 40px 20px;
+           display: grid;
+           grid-template-columns: repeat(4, 1fr);
+           gap: 40px;
+           font-size: 13px;
+           background: #fff;
+       }
+
+
+       .footer-col h4 {
+           text-transform: uppercase;
+           margin-bottom: 15px;
+           font-size: 14px;
+       }
+
+
+       .footer-col p {
+           margin-bottom: 10px;
+       }
+
+
+       /* --- RESPONSIVE --- */
+       @media (max-width: 768px) {
+           .product-listing {
+               grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+               margin: 20px 15px;
+           }
+           footer {
+               grid-template-columns: 1fr;
+               gap: 20px;
+           }
+           .main-nav {
+               display: none;
+           }
+           .nav-icons a[href^="mailto"] {
+               display: none;
+           }
+       }
+
+
+       @media (max-width: 480px) {
+           .product-listing {
+               grid-template-columns: 1fr;
+           }
+       }
+   </style>
+</head>
+<body>
+
+
+   <header>
+       <a href="index.html" class="logo">Bogen33</a>
+        <div class="nav-icons">
+            <a href="mailto:info@bogen33.ch">info@bogen33.ch</a>
+            <a href="#">Suche</a>
+            <a href="../cart.html">Anfrage (0)</a>
+            <a href="#">Menu</a>
+        </div>
+   </header>
+
+
+   <nav class="main-nav">
+       <ul>
+           <li><a href="index.html">Sortiment</a></li>
+           <li><a href="#">Service</a></li>
+           <li><a href="#">Designer</a></li>
+           <li><a href="#">Hersteller</a></li>
+           <li><a href="#">Über uns</a></li>
+           <li><a href="#">Möbelabo</a></li>
+           <li><a href="#">Jobs</a></li>
+       </ul>
+   </nav>
+
+
+   <main>
+       <div class="category-header">
+           <h1>Tische</h1>
+       </div>
+
+
+      <div class="product-listing">
+          <!-- Produkt 1: Travertin-Loungetische -->
+          <a href="Travertin_p1.html" class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="https://www.bogen33.ch/photo/data/3er-set-travertin-loungetische-1970er-jahre-lounge-tisch-tisch-697-112833-2.jpg?ts=1772803620"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/f5f5f5/31343C?text=Travertin-Loungetische';"
+                        alt="">
+               </div>
+               <div class="product-info-row">
+                   <div class="product-title">3er Set Travertin-Loungetische, 1970er Jahre</div>
+               </div>
+           </a>
+
+
+          <!-- Produkt 2: Bigla Gartentisch -->
+          <a href="Bigla_p2.html" class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="https://www.bogen33.ch/photo/data/bigla-gartentisch-120-x-70cm-neu-werksentwurf-bogen33-partner-gartentisch-garten-255-112843-2.jpg?ts=1772803620"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/f5f5f5/31343C?text=Bigla+Gartentisch';"
+                        alt="">
+               </div>
+               <div class="product-info-row">
+                   <div class="product-title">Bigla Gartentisch, 120 x 70cm, neu</div>
+               </div>
+           </a>
+
+
+          <!-- Produkt 3: Mid-Century Auszugstisch -->
+          <a href="Auszugstisch_3.html" class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="https://www.bogen33.ch/photo/data/mid-century-auszugstisch-buche-1950er-jahre-diverse-tische-tisch-579-112712-2.jpg?ts=1772803620"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/f5f5f5/31343C?text=Mid-Century+Auszugstisch';"
+                        alt="">
+               </div>
+               <div class="product-info-row">
+                   <div class="product-title">Mid-Century Auszugstisch Buche, 1950er Jahre</div>
+               </div>
+           </a>
+
+
+          <!-- Produkt 4: Tisch Birkensperrholz, Linoleum blau -->
+          <a href="Tish_p4.html" class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="https://www.bogen33.ch/photo/data/tisch-birkensperrholz-linoleum-blau-div-tische-tisch-69-100277-2.jpg?ts=1772803620"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/f5f5f5/31343C?text=Tisch+Birkensperrholz';"
+                        alt="">
+               </div>
+               <div class="product-info-row">
+                   <div class="product-title">Tisch Birkensperrholz, Linoleum blau</div>
+               </div>
+           </a>
+
+
+          <!-- Produkt 5: Saarinen Tulip Tisch -->
+          <a href="saarinen_p5.html" class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="https://www.bogen33.ch/photo/data/saarinen-tulip-tisch-120cm-marmor-saarinen-eero-diverse-tische-tisch-686-109338-2.jpg?ts=1772803620"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/f5f5f5/31343C?text=Saarinen+Tulip+Tisch';"
+                        alt="">
+               </div>
+               <div class="product-info-row">
+                   <div class="product-title">Saarinen Tulip Tisch ø120cm, Marmor</div>
+               </div>
+           </a>
+
+
+          <!-- Produkt 6: Kanttarelli Tisch -->
+          <a href="Kanttarelli_p6.html" class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="https://www.bogen33.ch/photo/data/kanttarelli-tisch-eero-aarnio-vintage-aarnio-eero-diverse-tische-tisch-684-110591-2.jpg?ts=1772803620"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/f5f5f5/31343C?text=Kanttarelli+Tisch';"
+                        alt="">
+               </div>
+               <div class="product-info-row">
+                   <div class="product-title">Kanttarelli Tisch, Eero Aarnio, vintage</div>
+               </div>
+           </a>
+
+
+          <!-- Produkt 7: Eichentisch mit Hairpinlegs -->
+          <a href="Eichentisch _p7.html" class="product-card">
+               <div class="product-image-wrapper">
+                   <img src="https://www.bogen33.ch/photo/data/eichentisch-mit-hairpinlegs-bogen33-partner-div-tische-tisch-215-82355-2.jpg?ts=1772803620"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x450/f5f5f5/31343C?text=Eichentisch';"
+                        alt="">
+               </div>
+               <div class="product-info-row">
+                   <div class="product-title">Eichentisch mit Hairpinlegs</div>
+               </div>
+           </a>
+       </div>
+   </main>
+
+
+   <footer>
+       <div class="footer-col">
+           <h4>Bogen33</h4>
+           <p>Hohlstrasse 100<br>CH-8004 Zürich</p>
+           <p><strong>Telefon</strong><br>+41 44 400 00 33</p>
+           <p><strong>Email</strong><br><a href="mailto:info@bogen33.ch">info@bogen33.ch</a></p>
+       </div>
+       <div class="footer-col">
+           <h4>Öffnungszeiten</h4>
+           <p>Di–Fr: 11–18:30 Uhr<br>Sa: 10–17:00 Uhr</p>
+           <p>Termine nach Vereinbarung jederzeit möglich</p>
+       </div>
+       <div class="footer-col">
+           <h4>H100 Openstorage</h4>
+           <p>Fr: 16:00–18:30 Uhr<br>Sa: 12:00–17:00 Uhr<br>Hohlstrasse 122</p>
+       </div>
+       <div class="footer-col">
+           <h4>Links</h4>
+           <ul>
+               <li><a href="#">Newsletter</a></li>
+               <li><a href="#">Impressum</a></li>
+               <li><a href="#">Datenschutz</a></li>
+           </ul>
+       </div>
+   </footer>
+
+   <script src="../cart.js"></script>
+   <script src="../widget.iife.js"></script>
+</body>
+</html>
