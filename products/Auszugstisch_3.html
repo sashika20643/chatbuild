@@ -429,11 +429,12 @@
         });
     </script>
 
-<script>    
+<script>
   window.addEventListener('load', () => {
     const productName = 'Mid-Century Auszugstisch, Buche, 1950er Jahre';
 
-    // Keep widget closed initially. Only schedule product-dwell notification.
+    try { localStorage.setItem('currentViewingProduct', JSON.stringify({ title: productName })); } catch (_) {}
+
     const startWhenReady = () => {
       if (
         window.Chatbot &&
@@ -441,31 +442,16 @@
         typeof window.ChatWidgetProductDwellTrigger.start === 'function'
       ) {
         window.ChatWidgetProductDwellTrigger.start(productName, 15000);
-        console.log('[ProductDwell] timer started for:', productName);
         return;
       }
-
-      // Retry briefly in case scripts are still initializing.
       window.setTimeout(startWhenReady, 250);
     };
 
     startWhenReady();
 
-  });
-
-</script>
-<script>
-  // Trigger inactivity suggestion only after a full idle window with no user interaction.
-  window.addEventListener('load', () => {
-    window.ChatWidgetInactivityTrigger?.start(60000);
+    window.ChatWidgetInactivityTrigger?.start(90000);
+    window.ChatWidgetScrollIndecisionTrigger?.start({ minUp: 2, minDown: 2, windowMs: 30000 });
   });
 </script>
-<script>
-    window.ChatWidgetScrollIndecisionTrigger?.start({
-      minUp: 2,
-      minDown: 2,
-      windowMs: 30000
-    });
-  </script>
 </body>
 </html>

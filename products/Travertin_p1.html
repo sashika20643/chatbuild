@@ -414,9 +414,13 @@
     <!-- Configure API URL via data attribute to avoid CORS issues -->
     <script src="../assets/widget.iife.js" data-api-url="https://getagent-email-agent-server.ceilu9.easypanel.host"></script>
     <script src="../assets/product-dwell-trigger.iife.js"></script>
+    <script src="../assets/inactivity-trigger.iife.js"></script>
+    <script src="../assets/scroll-indecision-trigger.iife.js"></script>
     <script>
       window.addEventListener('load', () => {
         const productName = 'Drei Loungetische in Travertin';
+
+        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ title: productName })); } catch (_) {}
 
         const startWhenReady = () => {
           if (
@@ -431,6 +435,9 @@
         };
 
         startWhenReady();
+
+        window.ChatWidgetInactivityTrigger?.start(90000);
+        window.ChatWidgetScrollIndecisionTrigger?.start({ minUp: 2, minDown: 2, windowMs: 30000 });
 
         const hideQuestionsButton = () => {
           const buttons = document.querySelectorAll('button');
