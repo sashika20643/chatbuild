@@ -428,9 +428,10 @@
     <script src="../assets/scroll-indecision-trigger.iife.js"></script>
     <script>
       window.addEventListener('load', () => {
+        const productId = 'tish-p4';
         const productName = 'Blaue 80er Jahre Tische';
 
-        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ title: productName })); } catch (_) {}
+        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ id: productId, title: productName })); } catch (_) {}
 
         const startWhenReady = () => {
           if (

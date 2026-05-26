@@ -428,9 +428,10 @@
     <script src="../assets/scroll-indecision-trigger.iife.js"></script>
     <script>
       window.addEventListener('load', () => {
+        const productId = 'saarinen-p5';
         const productName = 'Saarinen Tulip Tisch Marmor';
 
-        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ title: productName })); } catch (_) {}
+        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ id: productId, title: productName })); } catch (_) {}
 
         const startWhenReady = () => {
           if (

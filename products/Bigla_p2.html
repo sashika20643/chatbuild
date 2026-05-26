@@ -433,9 +433,10 @@
     <script src="../assets/scroll-indecision-trigger.iife.js"></script>
     <script>
       window.addEventListener('load', () => {
+        const productId = 'bigla-p2';
         const productName = 'Bogen33 Bigla Gartentisch Nachbau';
 
-        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ title: productName })); } catch (_) {}
+        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ id: productId, title: productName })); } catch (_) {}
 
         const startWhenReady = () => {
           if (

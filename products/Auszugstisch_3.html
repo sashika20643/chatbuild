@@ -431,9 +431,10 @@
 
 <script>
   window.addEventListener('load', () => {
+    const productId = 'auszugstisch-3';
     const productName = 'Mid-Century Auszugstisch, Buche, 1950er Jahre';
 
-    try { localStorage.setItem('currentViewingProduct', JSON.stringify({ title: productName })); } catch (_) {}
+    try { localStorage.setItem('currentViewingProduct', JSON.stringify({ id: productId, title: productName })); } catch (_) {}
 
     const startWhenReady = () => {
       if (

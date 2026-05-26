@@ -418,9 +418,10 @@
     <script src="../assets/scroll-indecision-trigger.iife.js"></script>
     <script>
       window.addEventListener('load', () => {
+        const productId = 'a87fcb37-9c19-4589-842f-54e3ae993204';
         const productName = 'Drei Loungetische in Travertin';
 
-        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ title: productName })); } catch (_) {}
+        try { localStorage.setItem('currentViewingProduct', JSON.stringify({ id: productId, title: productName })); } catch (_) {}
 
         const startWhenReady = () => {
           if (
